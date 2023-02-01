@@ -11,26 +11,32 @@ const Portfolio = () => {
     {
       id: 1,
       src: askvce,
+      lin: "https://github.com/VARUNvk1729/ASK-VCE",
     },
     {
       id: 2,
       src: varunshop,
+      lin: "https://github.com/VARUNvk1729/Varun-s-Shop",
     },
     {
       id: 3,
       src: spaceshooters,
+      lin: "https://github.com/VARUNvk1729/Space_Shooters",
     },
     {
       id: 4,
       src: collegedunia,
+      lin: "https://github.com/VARUNvk1729/College-Dunia",
     },
     {
       id: 5,
       src: todoo,
+      lin: "https://github.com/VARUNvk1729/TODOmatic",
     },
     {
       id: 6,
       src: landingpage,
+      lin: "https://github.com/VARUNvk1729/Landing-page",
     },
   ];
 
@@ -48,7 +54,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, lin }) => (
             <div key={id} className=" shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -59,7 +65,10 @@ const Portfolio = () => {
                 {/* <button className=" w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
                 </button> */}
-                <button className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105">
+                <button
+                  className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105"
+                  onClick={() => window.open(lin, "_blank")}
+                >
                   Code
                 </button>
               </div>
